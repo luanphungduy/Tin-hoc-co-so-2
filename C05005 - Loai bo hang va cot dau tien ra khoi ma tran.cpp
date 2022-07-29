@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main ()
+{
+	int t, cnt = 1;
+	scanf ("%d", &t);
+	while (t--)
+	{
+		int n, m;
+		scanf ("%d %d", &n, &m);
+		int a[n][m];
+		for (int i = 0; i < n; i++)
+			for (int j = 0; j < m; j++)
+				scanf ("%d", &a[i][j]);
+		printf ("Test %d: \n", cnt++);
+		for (int i = 1; i < n; i++)
+		{
+			for(int j = 1; j < m; j++)
+				printf ("%d ", a[i][j]);
+			printf ("\n");
+		}	
+	}
+}
+
+//1
+//3 3
+//1 2 4
+//3 4 0
+//6 3 5
